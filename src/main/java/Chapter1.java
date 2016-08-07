@@ -3,7 +3,7 @@
  */
 
 import java.util.Scanner;
-
+import lombok.Data;
 
 import java.io.FileReader;
 
@@ -13,7 +13,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
 
-public class Chapter1 {
+public @Data class Chapter1 {
 
     public static void main(String[] args) {
         readFromFile();
