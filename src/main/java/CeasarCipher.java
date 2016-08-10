@@ -83,7 +83,8 @@ public class CeasarCipher  implements Encryption
 	{
 
 		int offset = Integer.parseInt(key);
-		return Encrypt(text, 26 - offset);
+		String s=Integer.toString(26-offset);
+		return encryption(text, s);
 	}
 
 

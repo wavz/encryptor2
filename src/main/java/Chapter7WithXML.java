@@ -145,7 +145,7 @@ public class Chapter7WithXML
 		{
 			File theDir = new File("Encrypted");
 
-			// if the directory does not exist, create it
+
 			if (!theDir.exists())
 			{
 				System.out.println("creating directory");
@@ -157,7 +157,7 @@ public class Chapter7WithXML
 					result = true;
 				} catch (SecurityException se)
 				{
-					// handle it
+					System.out.println("Problem with creating the folder");
 				}
 				if (result)
 				{
