@@ -104,7 +104,7 @@ public class EncryptorWithHashMap {
 
 	}
 
-	public static void initializeEncryption()  {
+	public static void initializeEncryption()  {  //initializing the hashmap with the letters.
 		char[] allChar = new char[53];
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
 		ArrayList<Character> charArr = new ArrayList<Character>();
@@ -165,7 +165,7 @@ public class EncryptorWithHashMap {
 
 	}
 
-	public static String contentFromFile() {
+	public static String contentFromFile() { //reading the text from the file
 		System.out.println("please enter the path for the file:");
 		Scanner inputPath = new Scanner(System.in);
 		String path = inputPath.nextLine();

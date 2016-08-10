@@ -139,7 +139,7 @@ public class Chapter7WithXML
 
 	}
 
-	public static void createFolder(int flag)
+	public static void createFolder(int flag) //creating folder for each type of action
 	{
 		if (flag == 1)
 		{
@@ -217,7 +217,7 @@ public class Chapter7WithXML
 
 	}
 
-	public static void AlgoToXML(String path, Encryption algo)
+	public static void AlgoToXML(String path, Encryption algo) //making the algo as an XML
 	{
 
 		try
@@ -239,7 +239,7 @@ public class Chapter7WithXML
 		}
 	}
 
-	public static Encryption loadXMLtoObject(String path)
+	public static Encryption loadXMLtoObject(String path) // loading the Algorithm from a XMl to Object
 	{
 		String s1 = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
 		System.out.println(s1);
@@ -288,7 +288,7 @@ public class Chapter7WithXML
 		return content;
 	}
 
-	public static void writeToNewFile(String text, int flag, String fileName)
+	public static void writeToNewFile(String text, int flag, String fileName) // writing the resulted text to a new file
 	{
 		/*
 		 * String path = filePath; String[] s = fileName(path).split("\\.");
@@ -339,7 +339,7 @@ public class Chapter7WithXML
 
 	}
 
-	public static void action(String result, Encryption algo)
+	public static void action(String result, Encryption algo) // the main method
 	{
 		
 		File[] arr = finder("src/main/java");
@@ -428,7 +428,7 @@ public class Chapter7WithXML
 		}
 	}
 
-	public static String readFromBinary(DataInputStream in)
+	public static String readFromBinary(DataInputStream in) //reading the key from a binary file
 	{
 		String text = "";
 
@@ -442,7 +442,7 @@ public class Chapter7WithXML
 		}
 		return text;
 	}
-	public static boolean validateXMLSchema(String xsdPath, String xmlPath) throws JAXBException, IOException{
+	public static boolean validateXMLSchema(String xsdPath, String xmlPath) throws JAXBException, IOException{ // validating the XML with XSD
         
         try {
             SchemaFactory factory = 
@@ -461,7 +461,7 @@ public class Chapter7WithXML
 		System.out.println(obj);
 	}
 
-	public static File[] finder( String dirName){
+	public static File[] finder( String dirName){ //return a list if txt files only
 		File dir = new File(dirName);
 
 		return dir.listFiles(new FilenameFilter() {
@@ -471,7 +471,7 @@ public class Chapter7WithXML
 
 	}
 
-	public static void actionInjection(String result, MyApp app){
+	public static void actionInjection(String result, MyApp app){ // the same main method using dependency injection
 		File[] arr = finder("src/main/java");
 
 		int numOfFiles = arr.length ;

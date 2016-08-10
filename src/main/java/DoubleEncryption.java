@@ -46,28 +46,7 @@ public class DoubleEncryption  implements Encryption{
 	
 
 	
-	public String checkFirstKey(){
-		System.out.println("please enter a key between 1 to 25:");
-		Scanner in = new Scanner(System.in);
-		String key=in.nextLine();
-		int temp=Integer.parseInt(in.nextLine());
-		if(temp<1||temp>25){
-			System.out.println("invalid key");
-			checkFirstKey();
-		}
-		return key;
-	}
-	
-	public String checkSecondKey(){
-		System.out.println("please enter a ket between a to z:");
-		Scanner in = new Scanner(System.in);
-		String key=in.nextLine();
-		if(key.charAt(0)<'a'||key.charAt(0)>'z'){
-			System.out.println("invalid key");
-			checkSecondKey();
-		}
-		return key;
-	}
+
 
 	public String generateKey() {
 		CeasarCipher c=new CeasarCipher();
